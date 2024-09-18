@@ -20,5 +20,13 @@
   "env": {
     "browser": true,
     "node": true
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "parserOptions": {
+        "project": null
+      }
+    }
+  ]
 }
