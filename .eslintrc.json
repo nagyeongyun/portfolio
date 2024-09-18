@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": 0,
+    "no-duplicate-imports": "warn",
+    "no-unused-vars": "warn",
+    "quotes": ["warn", "single", { "avoidEscape": true }],
+    "@typescript-eslint/camelcase": "off"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
