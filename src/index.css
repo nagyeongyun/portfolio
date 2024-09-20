@@ -8,6 +8,11 @@
 }
 
 @font-face {
+  font-family: 'Pretendard-Thin';
+  src: url('/public/fonts/Pretendard-Thin.woff');
+}
+
+@font-face {
   font-family: 'Pretendard-Regular';
   src: url('/public/fonts/Pretendard-Regular.woff');
 }
