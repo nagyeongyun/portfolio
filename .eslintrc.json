@@ -3,6 +3,7 @@
     "airbnb",
     "airbnb-typescript",
     "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "parserOptions": {
@@ -12,9 +13,18 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": 0,
     "no-duplicate-imports": "warn",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "quotes": ["warn", "single", { "avoidEscape": true }],
-    "@typescript-eslint/camelcase": "off"
+    "@typescript-eslint/camelcase": "off",
+    "react/prop-types": "off",
+    "react/function-component-definition": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "dependencies": true
+      }
+    ]
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "env": {
