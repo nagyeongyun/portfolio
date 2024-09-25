@@ -1,7 +1,17 @@
-const SectionContent = ({ content }: { content: string }) => {
+import { SectionContentProps } from '../../types/Section';
+import { ReactComponent as OpenDetail } from '../../assets/icon/open-detail.svg';
+
+const SectionContent: React.FC<SectionContentProps> = ({ content, click }) => {
   return (
-    <div>
-      <p className="mt-0.5 text-[1rem]">◦ {content}</p>
+    <div
+      className={`flex flex-row mt-0.5 items-center ${click ? 'underline-animation cursor-pointer' : ''}`}
+    >
+      <div className="flex items-center">
+        <p className="text-[1rem] mb-0">◦ {content}</p>
+        {click && (
+          <OpenDetail className="w-[0.77rem] h-[0.77rem] ml-[0.35rem] mb-[0.05rem]" />
+        )}
+      </div>
     </div>
   );
 };

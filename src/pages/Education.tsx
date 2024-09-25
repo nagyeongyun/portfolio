@@ -3,6 +3,13 @@ import SectionSubTitle from '../components/common/SectionSubTitle';
 import SectionContent from '../components/common/SectionContent';
 
 const Education = () => {
+  const content = (
+    <>
+      AI 웹 서비스 프로젝트 III{' '}
+      <strong className="font-Pretendard-100">대상</strong>
+    </>
+  );
+
   return (
     <>
       <SectionTitle title="Education" />
@@ -18,7 +25,7 @@ const Education = () => {
         </div>
         <div className="flex-1 space-y-1">
           <SectionContent content="JavaScript, React, Node.js, 딥러닝 기초 학습" />
-          <SectionContent content="AI 웹 서비스 프로젝트 III 대상" />
+          <SectionContent content={content} click />
         </div>
       </div>
       <div>

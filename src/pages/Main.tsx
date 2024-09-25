@@ -1,7 +1,15 @@
 import Typewriter from 'typewriter-effect';
 import { ReactComponent as Arrow } from '../assets/icon/double-arrow.svg';
+import { ReactComponent as Link } from '../assets/icon/link.svg';
 
 const Main = () => {
+  const openNewTab = (url: string) => {
+    return () => {
+      const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+      if (newWindow) newWindow.opener = null;
+    };
+  };
+
   return (
     <>
       <div className="text-7xl self-start leading-[6rem] font-Pretendard-200">
@@ -30,17 +38,20 @@ const Main = () => {
         <p className="mb-0.5">
           Email. <span className="font-Pretendard-200">nathin9@naver.com</span>
         </p>
-        <p>
+        <div>
           Github.{' '}
-          <a
-            href="https:github.com/nagyeongyun"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-Pretendard-200 pb-0.5 underline-animation"
+          <div
+            onClick={openNewTab('https://github.com/nagyeongyun')}
+            className="underline-animation cursor-pointer"
           >
-            github.com/nagyeongyun
-          </a>
-        </p>
+            <div className="flex flex-row items-center">
+              <span className="font-Pretendard-200 pb-0.5">
+                github.com/nagyeongyun
+              </span>
+              <Link className="w-[0.8rem] h-[0.8rem] ml-1 mt-0.5" />
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         <hr className="mt-16 mb-12" />
