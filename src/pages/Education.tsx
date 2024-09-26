@@ -1,14 +1,23 @@
-import SectionTitle from '../components/common/SectionTitle';
-import SectionSubTitle from '../components/common/SectionSubTitle';
-import SectionContent from '../components/common/SectionContent';
+import SectionTitle from '../components/section/SectionTitle';
+import SectionSubTitle from '../components/section/SectionSubTitle';
+import SectionContent from '../components/section/SectionContent';
+import AwardImg from '../assets/img/award.svg';
+import ImgModal from 'components/common/ImgModal';
+import useModal from 'hooks/useModal';
 
 const Education = () => {
+  const { isOpenModal, toggleModal } = useModal();
+
   const content = (
     <>
       AI 웹 서비스 프로젝트 III{' '}
       <strong className="font-Pretendard-100">대상</strong>
     </>
   );
+
+  const clickShowImg = () => {
+    toggleModal();
+  };
 
   return (
     <>
@@ -25,9 +34,10 @@ const Education = () => {
         </div>
         <div className="flex-1 space-y-1">
           <SectionContent content="JavaScript, React, Node.js, 딥러닝 기초 학습" />
-          <SectionContent content={content} click />
+          <SectionContent content={content} click={clickShowImg} />
         </div>
       </div>
+      {isOpenModal && <ImgModal img={AwardImg} toggleModal={toggleModal} />}
       <div>
         <p className="font-Pretendard-200 text-[1.2rem] mt-9">
           덕성여자대학교

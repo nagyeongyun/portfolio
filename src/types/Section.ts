@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface SectionProps {
+export interface SectionSubTitleProps {
   title: string;
   sub: string;
   content: string;
@@ -10,5 +10,5 @@ export interface SectionProps {
 
 export interface SectionContentProps {
   content: ReactNode;
-  click?: boolean;
+  click?: () => void;
 }

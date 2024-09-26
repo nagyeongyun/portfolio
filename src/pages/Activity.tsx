@@ -1,5 +1,5 @@
-import SectionTitle from '../components/common/SectionTitle';
-import SectionSubTitle from '../components/common/SectionSubTitle';
+import SectionTitle from '../components/section/SectionTitle';
+import SectionSubTitle from '../components/section/SectionSubTitle';
 
 const Activity = () => {
   return (

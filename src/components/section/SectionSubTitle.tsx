@@ -1,12 +1,12 @@
-import { SectionProps } from '../../types/Section';
+import { SectionSubTitleProps } from '../../types/Section';
 
-const SectionSubTitle: React.FC<SectionProps> = ({
+const SectionSubTitle = ({
   title,
   sub,
   content,
   startDate,
   endDate,
-}) => {
+}: SectionSubTitleProps) => {
   return (
     <div>
       <div className="flex flex-row items-center">
