@@ -7,10 +7,10 @@ import Activity from './pages/Activity';
 function App() {
   return (
     <>
-      <main className="flex flex-col justify-center items-center top-0 sticky h-screen px-[28rem] bg-white">
+      <main className="flex flex-col justify-center items-center top-0 sticky h-screen sm:px-8 md:px-16 lg:px-[12rem] xl:px-[16rem] 2xl:px-[28rem] bg-white">
         <Main />
       </main>
-      <section className="relative bg-zinc-800 space-y-10 text-white px-[28rem] pt-[3rem] pb-[4rem]">
+      <section className="relative bg-zinc-800 space-y-12 text-white sm:px-8 md:px-16 lg:px-[12rem] xl:px-[16rem] 2xl:px-[28rem] pt-[3rem] pb-[4rem]">
         <article>
           <Skill />
         </article>

@@ -3,13 +3,6 @@ import { ReactComponent as Arrow } from '../assets/icon/double-arrow.svg';
 import { ReactComponent as Link } from '../assets/icon/link.svg';
 
 const Main = () => {
-  const openNewTab = (url: string) => {
-    return () => {
-      const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-      if (newWindow) newWindow.opener = null;
-    };
-  };
-
   return (
     <>
       <div className="text-7xl self-start leading-[6rem] font-Pretendard-200">
@@ -40,8 +33,10 @@ const Main = () => {
         </p>
         <div>
           Github.{' '}
-          <div
-            onClick={openNewTab('https://github.com/nagyeongyun')}
+          <a
+            href="https://github.com/nagyeongyun"
+            target="_blank"
+            rel="noopener noreferrer"
             className="underline-animation cursor-pointer"
           >
             <div className="flex flex-row items-center">
@@ -50,7 +45,7 @@ const Main = () => {
               </span>
               <Link className="w-[0.8rem] h-[0.8rem] ml-1 mt-0.5" />
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div>

@@ -12,3 +12,15 @@ export interface SectionContentProps {
   content: ReactNode;
   click?: () => void;
 }
+
+export interface PreviewBoxtProps {
+  img: string[];
+  title: string;
+  content: string[];
+  skill: string[];
+  url: string;
+}
+
+export interface TagProps {
+  skill: string[];
+}
