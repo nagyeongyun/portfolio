@@ -25,3 +25,7 @@ export interface PreviewBoxProps {
 export interface TagProps {
   skill: string[];
 }
+
+export interface SkillDetail {
+  [key: string]: string[];
+}

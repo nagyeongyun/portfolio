@@ -1,12 +1,3 @@
-// export interface ModalProps {
-//   title: string;
-//   subTitle: string;
-//   duration: string;
-//   team: string[];
-//   techStack: string[];
-//   development: string[];
-// }
-
 import { RefObject } from 'react';
 
 export interface ModalProps {
@@ -15,7 +6,13 @@ export interface ModalProps {
   modalRef: RefObject<HTMLDivElement>;
 }
 
-export interface ProjectDetailProps {
+export interface ImgModalProps {
+  img: string;
+  toggleModal: () => void;
+  modalRef: RefObject<HTMLDivElement>;
+}
+
+export interface ProjectDetail {
   title: string;
   subTitle: string;
   duration: string;
@@ -42,10 +39,4 @@ export interface ProjectDetailProps {
     feature: string;
     detail: string[];
   }[];
-}
-
-export interface ImgModalProps {
-  img: string;
-  toggleModal: () => void;
-  modalRef: RefObject<HTMLDivElement>;
 }

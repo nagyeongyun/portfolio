@@ -1,11 +1,11 @@
-import { ProjectDetailProps } from 'types/Modal';
+import { ProjectDetail } from 'types/Modal';
 import image0 from '../assets/img/pj0-page0.png';
 import image1 from '../assets/img/pj0-page1.png';
 import image2 from '../assets/img/pj0-page2.png';
 import image3 from '../assets/img/pj0-page3.png';
 import dev0 from '../assets/img/pj0-dev0.gif';
 
-export const project0: ProjectDetailProps = {
+export const project0: ProjectDetail = {
   title: 'Todis',
   subTitle: '날씨 맞춤 코디 추천 웹 서비스',
   duration: '2023.07 - 2023.08',

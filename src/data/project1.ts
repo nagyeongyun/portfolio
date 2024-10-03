@@ -1,4 +1,4 @@
-import { ProjectDetailProps } from 'types/Modal';
+import { ProjectDetail } from 'types/Modal';
 import image0 from '../assets/img/pj1-page0.png';
 import image1 from '../assets/img/pj1-page1.png';
 import image2 from '../assets/img/pj1-page2.png';
@@ -10,7 +10,7 @@ import dev1 from '../assets/img/pj1-dev1.png';
 import dev2 from '../assets/img/pj1-dev2.png';
 import dev3 from '../assets/img/pj1-dev3.png';
 
-export const project1: ProjectDetailProps = {
+export const project1: ProjectDetail = {
   title: '꿈틀',
   subTitle: 'AI 기반 맞춤형 동화 제작 웹 서비스',
   duration: '2024.07 - 2024.08',
