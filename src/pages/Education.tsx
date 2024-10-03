@@ -6,7 +6,7 @@ import ImgModal from 'components/common/ImgModal';
 import useModal from 'hooks/useModal';
 
 const Education = () => {
-  const { isOpenModal, toggleModal } = useModal();
+  const { isOpenModal, toggleModal, modalRef } = useModal();
 
   const content = (
     <>
@@ -23,7 +23,7 @@ const Education = () => {
     <>
       <SectionTitle title="Education" />
       <div className="flex">
-        <div className="flex-none pr-[10rem]">
+        <div className="flex-none pr-[12rem]">
           <SectionSubTitle
             title="엘리스 AI 웹 풀스택 트랙"
             sub="10th"
@@ -37,7 +37,13 @@ const Education = () => {
           <SectionContent content={content} click={clickShowImg} />
         </div>
       </div>
-      {isOpenModal && <ImgModal img={AwardImg} toggleModal={toggleModal} />}
+      {isOpenModal && (
+        <ImgModal
+          img={AwardImg}
+          toggleModal={toggleModal}
+          modalRef={modalRef}
+        />
+      )}
       <div>
         <p className="font-Pretendard-200 text-[1.2rem] mt-9">
           덕성여자대학교

@@ -49,7 +49,7 @@ const Main = () => {
         </div>
       </div>
       <div>
-        <hr className="mt-16 mb-12" />
+        <hr className="mt-16 mb-12 border-zinc-300" />
         <div className="text-[1.35rem] text-justify leading-[2rem] mb-[3rem]">
           <p className="mb-3">
             지속적으로 배우고 경험을 쌓아가는 개발자입니다.

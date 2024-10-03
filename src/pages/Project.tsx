@@ -1,17 +1,18 @@
 import SectionTitle from '../components/section/SectionTitle';
 import PreviewBox from 'components/project/PreviewBox';
+import Logo0 from '../assets/img/pj0-logo.svg';
+import Img0 from '../assets/img/pj0-preview.svg';
 import Logo1 from '../assets/img/pj1-logo.svg';
 import Img1 from '../assets/img/pj1-preview.svg';
-import Logo2 from '../assets/img/pj2-logo.svg';
-import Img2 from '../assets/img/pj2-preview.svg';
 
 const Project = () => {
   return (
     <div>
       <SectionTitle title="Project" />
-      <div className="grid grid-cols-2 gap-8 ">
+      <div className="grid grid-cols-2 gap-8 px-1">
         <PreviewBox
-          img={[Logo2, Img2]}
+          projectId={1}
+          img={[Logo1, Img1]}
           title="꿈틀"
           content={[
             '세상에 하나뿐인 동화, 꿈틀에서 마음껏 즐겨보세요!',
@@ -21,7 +22,8 @@ const Project = () => {
           url="https://github.com/Dream-Twist/FE_DreamTwist"
         />
         <PreviewBox
-          img={[Logo1, Img1]}
+          projectId={0}
+          img={[Logo0, Img0]}
           title="Todis"
           content={[
             '날씨 앱 하나로 옷 코디까지 쉽고 빠르게!',

@@ -13,7 +13,8 @@ export interface SectionContentProps {
   click?: () => void;
 }
 
-export interface PreviewBoxtProps {
+export interface PreviewBoxProps {
+  projectId: number;
   img: string[];
   title: string;
   content: string[];
