@@ -20,7 +20,7 @@ const PreviewBox = ({
   return (
     <div className="flex flex-col bg-zinc-700 h-auto transition-transform duration-300 ease-in-out hover:scale-[1.02]">
       <div
-        className="relative max-w-full h-[14.5rem] bg-cover"
+        className="relative max-w-full sm:h-[14.5rem] h-[12.5rem] bg-cover"
         style={{
           backgroundImage: `url(${img[1]})`,
           backgroundPosition: '47% 20%',
@@ -34,15 +34,19 @@ const PreviewBox = ({
       </div>
       <div className="flex-1 flex-col px-5 py-4">
         <div>
-          <p className="font-Pretendard-200 text-[1.7rem] mb-2">{title}</p>
-          <p className="text-[1rem] text-zinc-200 mb-1.5">{content[0]}</p>
-          <p className="text-[1rem] text-zinc-200 leading-[1.4rem]">
+          <p className="font-Pretendard-200 text-[1.5rem] md:text-[1.7rem] mb-2">
+            {title}
+          </p>
+          <p className="md:text-[1rem] text-[0.9rem] text-zinc-200 mb-1.5">
+            {content[0]}
+          </p>
+          <p className="md:text-[1rem] text-[0.9rem] text-zinc-200 leading-[1.4rem]">
             {content[1]}
           </p>
         </div>
         <div className="space-y-5 mt-7">
           <Tag skill={skill} />
-          <div className="flex space-x-3 text-center text-zinc-200 text-[0.85rem]">
+          <div className="flex space-x-3 text-center text-zinc-200 text-[0.7rem] md:text-[0.85rem]">
             <div
               onClick={clickShowModal}
               className="flex-1 py-2 border border-zinc-500 cursor-pointer hover:bg-zinc-600"

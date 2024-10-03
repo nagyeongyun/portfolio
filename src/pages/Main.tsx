@@ -5,7 +5,7 @@ import { ReactComponent as Link } from '../assets/icon/link.svg';
 const Main = () => {
   return (
     <>
-      <div className="text-7xl self-start leading-[6rem] font-Pretendard-200">
+      <div className="text-[1.5rem] sm:text-[2.5rem] md:text-6xl lg:text-7xl self-start leading-[2rem] sm:leading-[3rem] md:leading-[5rem] lg:leading-[6rem] font-Pretendard-200">
         <p>안녕하세요.</p>
         <p>
           <span className="inline-block">
@@ -27,7 +27,7 @@ const Main = () => {
           <span className="font-Pretendard-400">나경윤</span>입니다.
         </p>
       </div>
-      <div className="self-start text-xl mt-16">
+      <div className="self-start sm:text-xl text-[0.9rem] mt-16">
         <p className="mb-0.5">
           Email. <span className="font-Pretendard-200">nathin9@naver.com</span>
         </p>
@@ -50,7 +50,7 @@ const Main = () => {
       </div>
       <div>
         <hr className="mt-16 mb-12 border-zinc-300" />
-        <div className="text-[1.35rem] text-justify leading-[2rem] mb-[3rem]">
+        <div className="md:text-[1.35rem] text-[0.9rem] text-justify leading-[1.2rem] md:leading-[2rem] mb-[3rem]">
           <p className="mb-3">
             지속적으로 배우고 경험을 쌓아가는 개발자입니다.
           </p>
@@ -65,7 +65,9 @@ const Main = () => {
           </p>
         </div>
       </div>
-      <Arrow className="absolute bottom-10 w-[1.5rem] h-[1.5rem] self-center animate-bounce" />
+      <div className="flex justify-center">
+        <Arrow className="absolute bottom-10 w-[1.5rem] h-[1.5rem] self-center animate-bounce" />
+      </div>
     </>
   );
 };

@@ -7,9 +7,9 @@ import Img1 from '../assets/img/pj1-preview.svg';
 
 const Project = () => {
   return (
-    <div>
+    <div className="px-0">
       <SectionTitle title="Project" />
-      <div className="grid grid-cols-2 gap-8 px-1">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-1">
         <PreviewBox
           projectId={1}
           img={[Logo1, Img1]}

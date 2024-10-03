@@ -22,8 +22,8 @@ const Education = () => {
   return (
     <>
       <SectionTitle title="Education" />
-      <div className="flex">
-        <div className="flex-none pr-[12rem]">
+      <div className="flex flex-col md:flex-row">
+        <div className="flex-none md:pr-[12rem] md:mb-0 mb-4">
           <SectionSubTitle
             title="엘리스 AI 웹 풀스택 트랙"
             sub="10th"
@@ -45,16 +45,16 @@ const Education = () => {
         />
       )}
       <div>
-        <p className="font-Pretendard-200 text-[1.2rem] mt-9">
+        <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.2rem]  mt-9">
           덕성여자대학교
-          <span className="ml-3 text-[1rem] text-zinc-400 font-Pretendard-100">
+          <span className="ml-3 text-[0.8rem] md:text-[1rem] text-zinc-400 font-Pretendard-100">
             학사
           </span>
         </p>
-        <p className="whitespace-pre mt-1.5 text-[1rem] text-zinc-400">
+        <p className="whitespace-pre mt-1.5 text-[0.8rem] md:text-[1rem] text-zinc-400">
           일어일문학과(주전공){' '}
           <span className="ml-1.5">IT미디어공학과(복수전공)</span>
-          <p className="text-[0.9rem] mt-0.5">
+          <p className="text-[0.7rem] md:text-[0.9rem] mt-0.5">
             2018.03 - 2023.08 ㅣ<span className="ml-1">졸업</span>
           </p>
         </p>

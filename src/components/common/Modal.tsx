@@ -23,23 +23,23 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
     <Portal>
       <div className="fixed inset-0 flex items-center justify-center bg-zinc-800 bg-opacity-70">
         <div className="relative" ref={modalRef}>
-          <div className="w-[50rem] h-[55rem] text-zinc-800 bg-white px-20 py-6 pb-12 overflow-y-auto thin-scrollbar">
+          <div className="w-[20rem] sm:w-[30rem] md:w-[50rem] h-[35rem] lg:h-[55rem] md:h-[45rem] text-zinc-800 bg-white px-5 md:px-20 py-6 pb-12 overflow-y-auto thin-scrollbar">
             <DeleteBtn
               onClick={toggleModal}
               className="absolute top-2 right-3 cursor-pointer hover:opacity-80"
             />
             <div className="text-center">
-              <p className="font-Pretendard-300 text-[1.8rem]">
+              <p className="font-Pretendard-300 text-[1.5rem] md:text-[1.8rem]">
                 {projectDetailData[projectId].title}
               </p>
-              <p className="text-[0.9rem]">
+              <p className="text-[0.8rem] md:text-[0.9rem]">
                 {projectDetailData[projectId].subTitle}
               </p>
-              <p className="text-[0.7rem] text-zinc-500">
+              <p className="text-[0.6rem] md:text-[0.7rem] text-zinc-500">
                 {projectDetailData[projectId].duration}
               </p>
               <div className="flex justify-center my-6">
-                <Slider {...settings} className="w-[30rem]">
+                <Slider {...settings} className="w-[16rem] md:w-[30rem]">
                   {projectDetailData[projectId].images.map((image, index) => (
                     <img
                       key={index}
@@ -52,10 +52,10 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
               </div>
             </div>
             {/* 팀 */}
-            <p className="font-Pretendard-200 text-[1.3rem] mb-2 mt-16">
+            <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.3rem] mb-2 mt-16">
               &#128204; 팀
             </p>
-            <ul className="list-disc ml-5">
+            <ul className="list-disc ml-5 text-[0.9rem] md:text-[1rem]">
               {projectDetailData[projectId].team.map((member, index) => (
                 <li key={index} className="mb-1 break-words">
                   {member}
@@ -64,16 +64,16 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
             </ul>
 
             {/* 주요 기능 */}
-            <p className="font-Pretendard-200 text-[1.3rem] mb-2 mt-6">
+            <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.3rem] mb-2 mt-6">
               &#128204; 주요 기능
             </p>
-            <ul className="list-disc ml-5">
+            <ul className="list-disc ml-5 text-[0.9rem] md:text-[1rem]">
               {projectDetailData[projectId].keyFeatures.map((item, index) => (
                 <li key={index} className="mb-2">
                   {/* 기능명 */}
                   <p className="font-Pretendard-100">{item.feature}</p>
                   {/* 세부 사항 */}
-                  <ul className="text-[0.95rem] list-none">
+                  <ul className="text-[0.85rem] md:text-[0.95rem] list-none">
                     {item.detail.map((detail, detailIndex) => (
                       <li
                         key={detailIndex}
@@ -89,10 +89,10 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
             </ul>
 
             {/* 사용 기술 */}
-            <p className="font-Pretendard-200 text-[1.3rem] mb-2 mt-6">
+            <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.3rem] mb-2 mt-6">
               &#128204; 사용 기술
             </p>
-            <ul className="list-disc ml-5">
+            <ul className="list-disc ml-5 text-[0.9rem] md:text-[1rem]">
               {projectDetailData[projectId].techStack.map((item, index) => (
                 <li key={index} className="mb-2">
                   <div className="flex items-start">
@@ -102,7 +102,7 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
                     </span>
                   </div>
                   {/* 세부 사항 */}
-                  <ul className="text-[0.95rem] text-start leading-[1.2rem]">
+                  <ul className="text-[0.85rem] md:text-[0.95rem] text-start leading-[1.2rem]">
                     {item.reason.map((reason, reasonIndex) => (
                       <li
                         key={reasonIndex}
@@ -118,7 +118,7 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
             </ul>
 
             {/* 작업 기여도 */}
-            <p className="font-Pretendard-200 text-[1.3rem] mb-2 mt-6">
+            <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.3rem] mb-2 mt-6">
               &#128204; 작업 기여도
             </p>
             {Object.entries(projectDetailData[projectId].contributions).map(
@@ -137,7 +137,7 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
                   />
 
                   <div>
-                    <ul className="ml-5 list-disc">
+                    <ul className="ml-5 list-disc text-[0.9rem] md:text-[1rem]">
                       {items.details.map((item, itemIndex) => (
                         <li key={itemIndex} className="mb-3">
                           {/* 타이틀 */}
@@ -145,7 +145,7 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
                             {item.contribution}
                           </h3>
                           {/* 세부 사항 */}
-                          <ul className="text-[0.95rem] list-none">
+                          <ul className="text-[0.85rem] md:text-[0.95rem] list-none">
                             {item.detail.map((detail, detailIndex) => (
                               <li
                                 key={detailIndex}
@@ -165,10 +165,10 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
             )}
 
             {/* 협업 */}
-            <p className="font-Pretendard-200 text-[1.3rem] mb-2 mt-6">
+            <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.3rem] mb-2 mt-6">
               &#128204; 협업
             </p>
-            <ul className="list-disc ml-5">
+            <ul className="list-disc ml-5 text-[0.9rem] md:text-[1rem]">
               {projectDetailData[projectId].collaboration.map((item, index) => (
                 <li key={index} className="mb-2">
                   <div className="flex items-start">
@@ -178,7 +178,7 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
                     </span>
                   </div>
                   {/* 세부 사항 */}
-                  <ul className="text-[0.95rem] text-start leading-[1.2rem]">
+                  <ul className="text-[0.85rem] md:text-[0.95rem] text-start leading-[1.2rem]">
                     {item.detail.map((detail, detailIndex) => (
                       <li
                         key={detailIndex}
