@@ -1,12 +1,16 @@
+import { useState, useEffect } from 'react';
 import Portal from './Portal';
 import Slider from 'react-slick';
 import { ModalProps } from 'types/Modal';
 import { projectDetailData } from 'data/projectDetail';
 import { ReactComponent as DeleteBtn } from '../../assets/icon/delete-btn.svg';
+import { LoadingIcon } from './LoadingIcon';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
+  const [loading, setLoading] = useState(true);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -18,6 +22,10 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
     pauseOnHover: true,
     cssEase: 'linear',
   };
+
+  useEffect(() => {
+    setLoading(true);
+  }, [projectId]);
 
   return (
     <Portal>
@@ -38,14 +46,16 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
               <p className="text-[0.6rem] md:text-[0.7rem] text-zinc-500">
                 {projectDetailData[projectId].duration}
               </p>
-              <div className="flex justify-center my-6">
+              <div className="flex justify-center items-center my-6">
                 <Slider {...settings} className="w-[16rem] md:w-[30rem]">
+                  {loading && <LoadingIcon />}
                   {projectDetailData[projectId].images.map((image, index) => (
                     <img
                       key={index}
                       src={image}
                       alt="상세 이미지"
                       className="h-full w-full object-cover"
+                      onLoad={() => setLoading(false)}
                     />
                   ))}
                 </Slider>
