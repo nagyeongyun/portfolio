@@ -14,7 +14,7 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
   const settings = {
     dots: true,
     infinite: true,
-    arrows: true,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -127,9 +127,9 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
               ))}
             </ul>
 
-            {/* 작업 기여도 */}
+            {/* 프로젝트 기여 내용 */}
             <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.3rem] mb-2 mt-6">
-              &#128204; 작업 기여도
+              &#128204; 프로젝트 기여 내용
             </p>
             {Object.entries(projectDetailData[projectId].contributions).map(
               ([category, items], index) => (

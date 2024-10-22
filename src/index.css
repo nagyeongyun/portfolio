@@ -74,3 +74,12 @@ body {
 .thin-scrollbar::-webkit-scrollbar-thumb {
   background: #a0a0a0;
 }
+
+.slick-dots li button:focus:before {
+  opacity: 0.25 !important;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li.slick-active button:focus:before {
+  opacity: 0.75 !important;
+}
