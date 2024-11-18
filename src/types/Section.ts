@@ -29,3 +29,9 @@ export interface TagProps {
 export interface SkillDetail {
   [key: string]: string[];
 }
+
+export interface LinkContentProps {
+  text?: string;
+  linkText: string;
+  link: string;
+}

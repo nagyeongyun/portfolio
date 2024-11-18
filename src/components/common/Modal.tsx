@@ -87,7 +87,7 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
                     {item.detail.map((detail, detailIndex) => (
                       <li
                         key={detailIndex}
-                        className="mb-1 break-words flex items-start"
+                        className="mb-0.5 break-words flex items-start"
                       >
                         <span className="mr-2 flex-shrink-0">-</span>
                         <span>{detail}</span>
@@ -134,17 +134,19 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
             {Object.entries(projectDetailData[projectId].contributions).map(
               ([category, items], index) => (
                 <div key={index}>
-                  {/* 카테고리 */}
-                  <h2 className="font-Pretendard-100 mt-4 mb-2 underline decoration-amber-200 decoration-4">
+                  {/* 페이지 */}
+                  <h2 className="font-Pretendard-100 text-[1rem] mt-4 mb-2 underline decoration-double decoration-amber-200 decoration-2">
                     {category}
                   </h2>
 
-                  {/* 카테고리 이미지 */}
-                  <img
-                    src={items.image}
-                    alt={`${category} 이미지`}
-                    className="my-4 w-[70%] h-auto"
-                  />
+                  {/* 페이지 이미지 */}
+                  <div className="flex justify-center">
+                    <img
+                      src={items.image}
+                      alt={`${category} 이미지`}
+                      className="flex justify-center items-center my-4 w-[70%] h-auto"
+                    />
+                  </div>
 
                   <div>
                     <ul className="ml-5 list-disc text-[0.9rem] md:text-[1rem]">
