@@ -62,7 +62,7 @@ const Activity = () => {
           <SectionContent
             content={content({
               linkText: '아이디어톤 및 해커톤 참여',
-              link: 'https://github.com/ds-likelion-2021',
+              link: 'https://pineapple-cobra-0e0.notion.site/Github-16c0de8db79d80e68b93e21e5a39e7ef',
             })}
           />
         </div>

@@ -3,6 +3,7 @@ import Skill from './pages/Skill';
 import Education from './pages/Education';
 import Project from './pages/Project';
 import Activity from './pages/Activity';
+import Certificate from './pages/Certificate';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </article>
           <article>
             <Education />
+          </article>
+          <article>
+            <Certificate />
           </article>
         </div>
       </section>

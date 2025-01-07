@@ -39,4 +39,8 @@ export interface ProjectDetail {
     feature: string;
     detail: string[];
   }[];
+  trouble: {
+    feature: string;
+    detail: string[];
+  }[];
 }

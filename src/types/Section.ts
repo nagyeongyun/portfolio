@@ -2,10 +2,10 @@ import { ReactNode } from 'react';
 
 export interface SectionSubTitleProps {
   title: string;
-  sub: string;
+  sub?: string;
   content: string;
   startDate: string;
-  endDate: string;
+  endDate?: string;
 }
 
 export interface SectionContentProps {

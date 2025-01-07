@@ -204,6 +204,33 @@ const Modal = ({ projectId, toggleModal, modalRef }: ModalProps) => {
                 </li>
               ))}
             </ul>
+
+            {/* 트러블 슈팅 */}
+            <p className="font-Pretendard-200 text-[1.1rem] md:text-[1.3rem] mb-2 mt-6">
+              &#128204; 트러블 슈팅
+            </p>
+            <ul className="list-disc ml-5 text-[0.9rem] md:text-[1rem]">
+              {projectDetailData[projectId].trouble.map((item, index) => (
+                <li key={index} className="mb-2">
+                  {/* 에러 내용 */}
+                  <p className="font-Pretendard-100 my-1">{item.feature}</p>
+                  {/* 세부 사항 */}
+                  <ul className="text-[0.85rem] md:text-[0.95rem] list-none">
+                    {item.detail.map((detail, detailIndex) => {
+                      const labels = ['문제 : ', '원인 : ', '해결 : '];
+                      return (
+                        <li key={detailIndex} className="mb-1 flex items-start">
+                          <span className="mr-1 flex-shrink-0">
+                            {labels[detailIndex]}
+                          </span>
+                          <span className="break-words">{detail}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

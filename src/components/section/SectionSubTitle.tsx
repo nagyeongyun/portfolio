@@ -21,7 +21,7 @@ const SectionSubTitle = ({
         {content}
       </p>
       <p className="whitespace-pre mt-0.5 text-[0.7rem] md:text-[0.9rem] text-zinc-400">
-        {startDate} - {endDate}
+        {startDate} {endDate ? `- ${endDate}` : ''}
       </p>
     </div>
   );
