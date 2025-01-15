@@ -25,9 +25,9 @@ const Education = () => {
       <div className="flex flex-col md:flex-row">
         <div className="flex-none md:pr-[12rem] md:mb-0 mb-4">
           <SectionSubTitle
-            title="엘리스 AI 웹 풀스택 트랙"
+            title="엘리스 AI 웹 풀 스택 트랙"
             sub="10th"
-            content="IT 부트캠프 Elice"
+            content="사설 교육ㅣ엘리스트랙"
             startDate="2024.03"
             endDate="2024.08"
           />
