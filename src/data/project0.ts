@@ -107,13 +107,13 @@ export const project0: ProjectDetail = {
     {
       feature: '디자인 시스템 이해',
       detail: [
-        'CSSProperties와 글로벌 스타일을 정의하여 일관된 디자인 시스템을 구축했습니다.',
+        '팀에서 구축한 CSSProperties와 글로벌 스타일 시스템을 활용하여 일관된 UI 구현과 컴포넌트 스타일링 효율성을 향상시킬 수 있었습니다.',
       ],
     },
     {
       feature: 'Swagger를 활용한 백엔드와의 원활한 소통',
       detail: [
-        'Swagger로 API 구조를 파악해 요청/응답 형식을 명확히 이해하고 소통 효율성을 높였습니다.',
+        'Swagger 문서를 활용해 API 구조를 파악하고 팀원 간의 소통을 개선했습니다.',
       ],
     },
   ],
